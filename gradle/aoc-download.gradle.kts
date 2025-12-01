@@ -9,10 +9,6 @@ fun downloadInput(day: Int, session: String, targetFile: File) {
     val conn = (url.openConnection() as HttpURLConnection).apply {
         requestMethod = "GET"
         setRequestProperty("Cookie", "session=$session")
-        setRequestProperty(
-            "User-Agent",
-            "github.com/zooty/adventofcode2024 build-script (+https://adventofcode.com)"
-        )
         connectTimeout = 10000
         readTimeout = 30000
     }

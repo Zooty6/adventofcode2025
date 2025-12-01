@@ -12,6 +12,7 @@ import java.util.stream.Stream;
 import static org.reflections.scanners.Scanners.SubTypes;
 
 public class AdventOfCode {
+    private AdventOfCode() {}
 
     /**
      * Runs the program, calculates every day's both solutions and prints it to the standard output.
@@ -19,7 +20,7 @@ public class AdventOfCode {
      *
      * @param args A list of numbers. Only those days will be processed.
      */
-    public static void main(String[] args) {
+    static void main(String[] args) {
         getDaySolutions()
                 .filter(filterByAppArguments(args))
                 .forEach(day -> {
