@@ -37,7 +37,7 @@ public class AdventOfCode {
     private static String invoke(String methodName, Day day) {
         Method method = day.getClass().getMethod(methodName);
         if (method.isAnnotationPresent(Ignored.class)) {
-            return "IGNORED" + getReason(method.getAnnotation(Ignored.class)); 
+            return "IGNORED" + getReason(method.getAnnotation(Ignored.class));
         } else {
             return (String) method.invoke(day);
         }

@@ -7,11 +7,9 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class PrintingDepartment {
-    private record NeighborCountWithCoordinate(Coordinate coordinate, int numberOfNeighbors) {
-    }
+    private record NeighborCountWithCoordinate(Coordinate coordinate, int numberOfNeighbors) {}
 
-    private record SectorWithCoordinate(Coordinate coordinate, Sector sector) {
-    }
+    private record SectorWithCoordinate(Coordinate coordinate, Sector sector) {}
 
     private final List<List<Sector>> map;
 
