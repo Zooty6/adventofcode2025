@@ -38,6 +38,7 @@ public class Cinema {
 
     private Stream<Rectangle> getAllRectangles() {
         return IntStream.range(0, tileMap.size())
+                .parallel()
                 .boxed()
                 .flatMap(indexA -> IntStream.range(1, tileMap.size())
                         .mapToObj(indexB -> new Rectangle(tileMap.get((indexA)), tileMap.get(indexB))));
